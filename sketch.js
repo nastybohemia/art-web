@@ -6,7 +6,7 @@ let input;
 let analyzer;
 //let sound;
 let button;
-var songs = ['Moon River.wav', 'Kinone - Ghetto.wav'];
+var songs = ['art-web/Moon River.wav', 'art-web/Kinone - Ghetto.wav'];
 // number of songs in the music dir
 var songCount = songs.length;
 var currentSong = 0;
@@ -16,8 +16,8 @@ var dialogBoxI = {
     boxSizeY: 20,
     overBox: false,
     locked: false,
-    image: ('keyboard-2.jpg'),
-    closeBtn: ('close-128-1.png'),
+    image: ('art-web/keyboard-2.jpg'),
+    closeBtn: ('art-web/close-128-1.png'),
     close: function(){
         dialogBoxI.close();
     },
@@ -88,11 +88,11 @@ function setup() {
   //strokeWeight(2);
         background (150);
     //bottom menu
-    brush = loadImage ('brush-512-2.png');
-    eraser = loadImage ('erase-512-1.png');
-    print = loadImage ('print-1.png');
-    settings = loadImage ('settings-1.png');
-    trash = loadImage ('trash-bin-1.png');
+    brush = loadImage ('art-web/brush-512-2.png');
+    eraser = loadImage ('art-web/erase-512-1.png');
+    print = loadImage ('art-web/print-1.png');
+    settings = loadImage ('art-web/settings-1.png');
+    trash = loadImage ('art-web/trash-bin-1.png');
 }
 
 function windowResized() {
@@ -469,14 +469,14 @@ function mousePressed() {
     {
         click.stop();
       brushSound.play();
-      cursor('brush-1.png');
+      cursor('art-web/brush-1.png');
         //redWalker();
         graphics.noErase();
         ellipseX = 10;
         ellipseY = 10;
     } else {
         brushSound.stop();
-        cursor('cursor-64-1.png');
+        cursor('art-web/cursor-64-1.png');
         ellipseX = 0;
         ellipseY = 0;
   }
@@ -485,7 +485,7 @@ function mousePressed() {
     {
         click.stop();
       eraserSound.play();
-      cursor('eraser-64-2.png');
+      cursor('art-web/eraser-64-2.png');
         graphics.erase();
         ellipseX = 10;
         ellipseY = 10;
