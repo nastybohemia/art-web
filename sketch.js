@@ -58,21 +58,6 @@ var graphics;
 //color picker
 let inp1;
 
-function preload() {
-    song = loadSound('music/' + songs[currentSong]);
-  // Load a sound file
-  //sound = loadSound('UI Bloop 1.wav');
-    click = loadSound('Tap-183158/Tap 1.wav');
-    //bottom menu
-    trashSound = loadSound('sound/sfx2.wav');
-    printSound = loadSound('sound/Printer-2.wav');
-    settingsSound = loadSound('sound/settings-1.wav');
-    eraserSound = loadSound('sound/High Whoosh.wav');
-    brushSound = loadSound('sound/Ink Blot 1.wav');
-    dialogBoxI.image = loadImage('keyboard-2.jpg');
-    dialogBoxI.closeBtn = loadImage('close-128-1.png');
-}
-
 function setup() {
     //load music song = loadSound('Moon River.wav', 'Kinone - Ghetto.wav');
     // create canvas
@@ -81,7 +66,6 @@ function setup() {
   // below upper left corner of the window
   cnv.position(0, 100);
     const c = createCanvas(1435,715);
-    c.drop(gotFile);
     graphics = createGraphics(1435,715);
     box = createGraphics(1435,715);
     noStroke();
