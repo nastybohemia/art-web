@@ -96,12 +96,6 @@ function setup() {
     rectMode(RADIUS);
   //strokeWeight(2);
         background (150);
-    //bottom menu
-    image(brush, width / 4 + 100, height/2 + 250, print.width / 6, print.height / 6);
-    image(eraser, width / 4 + 200, height/2 + 250, print.width / 6, print.height / 6);
-    image(print, width / 4 + 300, height/2 + 250, print.width / 6, print.height / 6);
-    image(settings, width / 4 + 400, height/2 + 250, settings.width / 6, settings.height / 6);
-    image(trash, width / 4 + 500, height/2 + 250, trash.width / 6, trash.height / 6);
     
 }
 
@@ -127,6 +121,12 @@ function draw() {
     stroke(156, 39, 176);
     dialogBoxI.overBox = false;
   }
+    //bottom menu
+    image(brush, width / 4 + 100, height/2 + 250, print.width / 6, print.height / 6);
+    image(eraser, width / 4 + 200, height/2 + 250, print.width / 6, print.height / 6);
+    image(print, width / 4 + 300, height/2 + 250, print.width / 6, print.height / 6);
+    image(settings, width / 4 + 400, height/2 + 250, settings.width / 6, settings.height / 6);
+    image(trash, width / 4 + 500, height/2 + 250, trash.width / 6, trash.height / 6);
     //draw ellipses
     graphics.noStroke();
     //graphics.fill(255, 0, 0);
