@@ -58,6 +58,15 @@ var graphics;
 //color picker
 let inp1;
 
+function preload() {
+    //bottom menu
+    brush = loadImage ('art-web/brush-512-2.png');
+    eraser = loadImage ('art-web/erase-512-1.png');
+    print = loadImage ('art-web/print-1.png');
+    settings = loadImage ('art-web/settings-1.png');
+    trash = loadImage ('art-web/trash-bin-1.png');
+}
+
 function setup() {
     //load music song = loadSound('Moon River.wav', 'Kinone - Ghetto.wav');
     // create canvas
@@ -88,11 +97,12 @@ function setup() {
   //strokeWeight(2);
         background (150);
     //bottom menu
-    brush = loadImage ('art-web/brush-512-2.png');
-    eraser = loadImage ('art-web/erase-512-1.png');
-    print = loadImage ('art-web/print-1.png');
-    settings = loadImage ('art-web/settings-1.png');
-    trash = loadImage ('art-web/trash-bin-1.png');
+    image(brush, width / 4 + 100, height/2 + 250, print.width / 6, print.height / 6);
+    image(eraser, width / 4 + 200, height/2 + 250, print.width / 6, print.height / 6);
+    image(print, width / 4 + 300, height/2 + 250, print.width / 6, print.height / 6);
+    image(settings, width / 4 + 400, height/2 + 250, settings.width / 6, settings.height / 6);
+    image(trash, width / 4 + 500, height/2 + 250, trash.width / 6, trash.height / 6);
+    
 }
 
 function windowResized() {
@@ -162,12 +172,7 @@ function draw() {
   else {
     cursor('brush-1.png'); // Draw cursor as cross
   }*/
-    //bottom menu
-    image(brush, width / 4 + 100, height/2 + 250, print.width / 6, print.height / 6);
-    image(eraser, width / 4 + 200, height/2 + 250, print.width / 6, print.height / 6);
-    image(print, width / 4 + 300, height/2 + 250, print.width / 6, print.height / 6);
-    image(settings, width / 4 + 400, height/2 + 250, settings.width / 6, settings.height / 6);
-    image(trash, width / 4 + 500, height/2 + 250, trash.width / 6, trash.height / 6);
+    
     //brush hover
     var distanceBrush = dist(mouseX, mouseY, width / 4 + 150, height/2 + 300);
     if(distanceBrush < 50){
